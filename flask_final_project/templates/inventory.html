@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="table table-striped table-dark">
+    <thread>
+        <td>Product Name</td>
+        <td>Product Category</td>
+        <td>Product Description</td>
+        <td>Product Quantity</td>
+        <td>Check-In Date</td>
+    </thread>
+    {% for row in rows %}
+       <tr>
+           <td>{{row["productname"]}}</td>
+           <td>{{row["category"]}}</td>
+           <td>{{row["description"]}}</td>
+           <td>{{row["quantity"]}}</td>
+           <td>{{row["checkdate"]}}</td>
+       </tr>
+    {% endfor %}
+</table>
+{% endblock %}
